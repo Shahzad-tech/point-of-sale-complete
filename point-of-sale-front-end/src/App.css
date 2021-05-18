@@ -1,0 +1,47 @@
+.brand {
+  background-color: rgb(147,112,219);
+  border-radius: 150px 0px 0px 150px;
+  text-align: center;
+}
+.box {
+  margin-top: 5em;
+  height: 48em;
+}
+.login {
+  background-color: white;
+  border-radius: 0px 150px 150px 0px;
+  height: 100%;
+}
+
+#but {
+  background-color: rgb(147,112,219);
+  border-color: rgb(147,112,219)
+}
+
+form {
+  margin-top: 16em;
+}
+
+.rowss {
+  justify-content:center;
+}
+#first {
+  padding-top: 2em;
+}
+
+label {
+  color: rgb(147,112,219);
+
+}
+
+input {
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-color: rgb(147,112,219);
+}
+
+input::placeholder {
+  text-align: center
+}
+
