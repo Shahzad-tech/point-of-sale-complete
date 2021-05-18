@@ -46,9 +46,6 @@ function App(){
         </div>
 
         <Container>
-            
-       
-            
             <Row className= "upperrow" >
                 <Col className= "mystyle" xs="2" >
                     <Row>
@@ -102,12 +99,6 @@ function App(){
                     <span className="offset-8" style={{direction:"rtl"}}>1000Rs</span>
                 </Col>
                 <hr/>
-
-
-
-
-
-
 
                 <Col sm="12" className="clearfixe">
 
