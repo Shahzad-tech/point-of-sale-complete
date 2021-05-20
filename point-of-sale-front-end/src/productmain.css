@@ -1,0 +1,37 @@
+.topbutton{
+/* border: 1px solid black; */
+float: right;
+background-color: aqua;
+background-color: rgb(113, 85, 170);
+font-family: monospace;
+color: white;
+border-radius: 0%;
+/* border-radius: 150px 0px 0px 150px; */
+}
+.topcolumn{
+    /* border: 1px solid black; */
+    justify-content: end;
+    margin-bottom: 10px;
+}
+tr{
+    /* padding: auto; */
+    background-color: white;
+}
+#but{
+background-color: rgb(113, 85, 170);
+border-color: rgb(113, 85, 170);
+width: 11.5em;
+border-radius: 20px;
+font-family: monospace;
+}
+Input::placeholder{
+    text-align: left;
+}
+#navbar{
+    background-color: rgb(113, 85, 170);
+    color: white;
+}
+#midnavitem{
+    display:inline-block;
+    text-align: center;
+}

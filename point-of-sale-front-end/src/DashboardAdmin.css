@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(113, 85, 170);
+}
+
+.welcome__header {
+    margin: 5em;
+    margin-top: 7em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h3 {
+    color: rgb(230,230,250);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    color: rgb(230,230,250);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 17px;
+    padding-right: 15px;
+}
