@@ -12,7 +12,7 @@ import {
 
 import React, { useState } from 'react';
 
-function App(){
+function AddProduct(){
     const [isOpen, setIsOpen] = useState(false); //navbar things
     const toggle = () => setIsOpen(!isOpen); //navbarthings
     return(
@@ -117,4 +117,4 @@ function App(){
 
 }
 
-export default App
+export default AddProduct

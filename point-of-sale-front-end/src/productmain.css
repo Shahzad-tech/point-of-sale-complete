@@ -35,3 +35,21 @@ Input::placeholder{
     display:inline-block;
     text-align: center;
 }
+a {
+    color:white;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a:hover {
+    color:white;
+    text-decoration: none;
+}
+span {
+    color:white;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    vertical-align: middle;
+}
+tabo {
+    color: black
+}

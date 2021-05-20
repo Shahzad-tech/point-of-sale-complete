@@ -16,9 +16,9 @@ import {
     NavbarText
   } from 'reactstrap';
 
-import './POS-cashier.css';
+import './cashier.css';
 
-function App(){
+function Cashier(){
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
@@ -137,4 +137,4 @@ const mystyle = {
   
 }
 
-export default App;
+export default Cashier;

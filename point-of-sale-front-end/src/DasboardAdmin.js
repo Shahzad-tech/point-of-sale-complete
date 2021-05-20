@@ -40,7 +40,10 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
       flexWrap: 'wrap',
       minWidth: 200,
-      width: '100%',
+      width: '90%',
+      marginTop: 100,
+      justifyContent: 'center',
+      marginBottom: 100,
     },
     image: {
       position: 'relative',
@@ -108,65 +111,45 @@ const useStyles = makeStyles((theme) => ({
   
 
 function Dashboard() {
-    const classes = useStyles();
-
-    return (
-    <div>
-        <AppBar className='appbar' style={{backgroundColor: 'rgb(230,230,250)', color: 'rgb(113, 85, 170)'}}>
-            <Toolbar>
-                <Typography variant="h5">SMAART Admin Panel</Typography>
-            </Toolbar>        
-        </AppBar>
-        
-        <div className="welcome__header">
-          
-          <h3>Welcome AdminName!</h3>
-          
-          <IconButton >
-            <p>AdminName</p>
-            <SupervisorAccountIcon fontSize='large' style={{color: 'rgb(230,230,250)'}}/>
-          </IconButton>
-
-        </div>
-
-
-        <div className={classes.root}>
-            {images.map((image) => (
-            <ButtonBase
-                focusRipple
-                key={image.title}
-                className={classes.image}
-                focusVisibleClassName={classes.focusVisible}
-                style={{
-                width: image.width,
-                marginLeft: '6em',
-                marginTop: '2em',
-                
-                }}
-            >
-                <span
-                className={classes.imageSrc}
-                style={{
-                    backgroundImage: `url(${image.url})`,
-                }}
-                />
-                <span className={classes.imageBackdrop} />
-                <span className={classes.imageButton}>
-                <Typography
-                    component="span"
-                    variant="subtitle2"
-                    color="inherit"
-                    className={classes.imageTitle}
-                >
-                    {image.title}
-                    <span className={classes.imageMarked} />
-                </Typography>
-                </span>
-            </ButtonBase>
-            ))}
-        </div>
+  const classes = useStyles();
+  return (
+    <div className="mb-15">
+      <AppBar className='appbar' style={{backgroundColor: 'rgb(230,230,250)', color: 'rgb(113, 85, 170)'}}>
+        <Toolbar>
+          <Typography variant="h5">SMAART Admin Dashboard</Typography>
+          <div className="offset-8"> 
+            <IconButton >
+              <p>AdminName</p>
+              <SupervisorAccountIcon fontSize='large' style={{color: 'rgb(113, 85, 170)'}}/>
+            </IconButton>
+          </div>
+        </Toolbar>        
+      </AppBar>
+      <div className={classes.root}>
+        {images.map((image) => (
+          <ButtonBase
+            focusRipple
+            key={image.title}
+            className={classes.image}
+            focusVisibleClassName={classes.focusVisible}
+            style={{
+              width: image.width,
+              marginLeft: '6%',
+              marginTop: '5%',  
+            }}>
+            <span className={classes.imageSrc} style={{backgroundImage: `url(${image.url})`,}}/>
+            <span className={classes.imageBackdrop} />
+            <span className={classes.imageButton}>
+              <Typography component="span" variant="subtitle2" color="inherit" className={classes.imageTitle}>
+                {image.title}
+                <span className={classes.imageMarked} />
+              </Typography>
+            </span>
+          </ButtonBase>
+        ))}
+      </div>
     </div>
-    );
+  );
 }
 
 export default Dashboard

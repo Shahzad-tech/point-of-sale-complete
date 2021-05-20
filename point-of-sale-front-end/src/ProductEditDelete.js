@@ -18,7 +18,7 @@ import { BsPencil } from "react-icons/bs";
 import { FiDelete } from "react-icons/fi";
 import { Table } from 'reactstrap';
 
-function App(){
+function ProductEdit(){
 
     const [isOpen, setIsOpen] = useState(false); //navbar things
     const toggle = () => setIsOpen(!isOpen); //navbarthings
@@ -105,4 +105,4 @@ function App(){
         </div>
     )
 }
-export default App;
+export default ProductEdit;
