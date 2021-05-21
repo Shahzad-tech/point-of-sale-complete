@@ -1,10 +1,10 @@
 import { Row,Col,Button, Form, FormGroup, Label, Input} from 'reactstrap';
-import './Addproduct.css'
+import './Addproduct.css';
 import { IoPeople } from "react-icons/io5";
 import { NavLink, NavDropdown, Nav, Navbar} from 'react-bootstrap';
 import React, { useState } from 'react';
 
-function AddProduct(){
+function AddCategory(){
     return(
         <div>
             <Navbar collapseOnSelect expand="md" sticky="top" className="navbar">
@@ -42,7 +42,7 @@ function AddProduct(){
                 </Row>
                 <Row sm='12'>
                     <Col id="headingColumn">
-                        <div className="text-muted">Add Products here</div>
+                        <div className="text-muted">Add Categories here</div>
                     </Col>
                 </Row>
                 <Col sm='12'>
@@ -50,20 +50,14 @@ function AddProduct(){
                         <Row>
                             <Col sm='8'>
                                 <FormGroup>
-                                        <Label for="productnamel">Product Name</Label>
-                                        <Input type="text" name="productname" id="exampleEmail" placeholder="Enter Product" />
+                                        <Label for="productnamel">Category Name</Label>
+                                        <Input type="text" name="productname" id="exampleEmail" placeholder="Enter Category Name" />
                                 </FormGroup>
                             </Col>
                             <Col sm='4' id="categorycolumn">
                                 <FormGroup>
-                                    <Label for="exampleSelect">Choose Category</Label>
-                                    <Input type="select" name="select" id="exampleSelect">
-                                        <option>Category A</option>
-                                        <option>Category B</option>
-                                        <option>Category C</option>
-                                        <option>Category D</option>
-                                        <option>Category E</option>
-                                    </Input>
+                                    <Label for="exampleSelect">Category Code</Label>
+                                    <Input type="text" name="select" id="exampleSelect" placeholder="Enter code here"/>
                                 </FormGroup>
                             </Col>
                         </Row>
@@ -72,20 +66,6 @@ function AddProduct(){
                                 <FormGroup>
                                 <Label for="exampleText">Description</Label>
                                     <Input type="textarea" name="text" id="exampleText" />
-                                </FormGroup>
-                            </Col>
-                        </Row>
-                        <Row >
-                            <Col sm='6'>
-                                <FormGroup>
-                                    <Label for="quantity">Quantity</Label>
-                                    <Input type="number" name="quantity" id="exampleEmail" placeholder="12" />
-                                </FormGroup>
-                            </Col>
-                            <Col sm='6'>
-                                <FormGroup>
-                                    <Label for="price">Price</Label>
-                                    <Input type="number" name="price" id="exampleEmail" placeholder="110$" />
                                 </FormGroup>
                             </Col>
                         </Row>
@@ -104,7 +84,7 @@ function AddProduct(){
                         </Row>
                         <Row>
                             <Col sm='12' className='mt-4' id="bottomcolumn">
-                                <Button id="bottombutton">Add Product</Button>
+                                <Button id="bottombutton">Add Category</Button>
                             </Col>
                         </Row>
                     </Form>
@@ -114,4 +94,4 @@ function AddProduct(){
     )
 }
 
-export default AddProduct
+export default AddCategory

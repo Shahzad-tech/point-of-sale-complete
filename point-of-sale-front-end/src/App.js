@@ -8,7 +8,9 @@ import AddProduct from './Addproduct.js';
 import ProductEdit from './ProductEditDelete';
 import Cashier from './cashier.js';
 import Product from './productmain';
-import AddCashier from "./AddCashier.js"
+import AddCashier from "./AddCashier.js";
+import AddCategory from "./AddCategory.js";
+import ViewCashier from "./ViewCashiers.js";
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
     <Product/>
     //<AddCashier/>
     //<AddProduct/>
+    //<ViewCashier/>
   );
 }
 

@@ -11,27 +11,28 @@ form{
 #bottomcolumn{
     display: flex;
     justify-content:flex-end;
-
 }
 #bottombutton{
     background-color: rgb(113, 85, 170);
     border-color: rgb(113, 85, 170);
     width: 11.5em;
     /* border-radius: 20px; */
-    font-family: monospace;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-#addproductheading{
+/* #addproductheading{
     font-family:Arial, Helvetica, sans-serif;
     font-weight: lighter;
-}
+    border: 1px solid black;
+} */
 #headingColumn{
-    display: flex;
-    justify-content:center;
-    /* margin-left: 1em; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
 }
 #buto{
     background-color: rgb(113, 85, 170);
     border-color: rgb(113, 85, 170);
     width: 11.5em;
-    font-family: monospace;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

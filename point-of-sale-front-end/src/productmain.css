@@ -1,28 +1,11 @@
-.topbutton{
-/* border: 1px solid black; */
-float: right;
-background-color: aqua;
-background-color: rgb(113, 85, 170);
-font-family: monospace;
-color: white;
-border-radius: 0%;
-/* border-radius: 150px 0px 0px 150px; */
-}
 .topcolumn{
     /* border: 1px solid black; */
     justify-content: end;
     margin-bottom: 10px;
 }
-tr{
+tr {
     /* padding: auto; */
     background-color: white;
-}
-#but{
-background-color: rgb(113, 85, 170);
-border-color: rgb(113, 85, 170);
-width: 11.5em;
-border-radius: 20px;
-font-family: monospace;
 }
 Input::placeholder{
     text-align: left;
@@ -62,13 +45,13 @@ span {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     vertical-align: middle;
 }
-tabo {
-    margin-top: 20px;
+.tab-title {
+    color:rgb(113, 85, 170);
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
 }
-#noanim-tab-example{
-    color: black;
-} 
-.tabb{
-    /* margin-top: 90px; */
-    display: block;
+.container-fluid {
+    margin-top: 40px;
 }
+
