@@ -8,12 +8,15 @@ import AddProduct from './Addproduct.js';
 import ProductEdit from './ProductEditDelete';
 import Cashier from './cashier.js';
 import Product from './productmain';
+import AddCashier from "./AddCashier.js"
 
 function App() {
   return (
     //<Cashier/>
     //<ProductEdit/>
     <Product/>
+    //<AddCashier/>
+    //<AddProduct/>
   );
 }
 

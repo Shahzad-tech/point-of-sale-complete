@@ -27,9 +27,21 @@ font-family: monospace;
 Input::placeholder{
     text-align: left;
 }
-#navbar{
+#collasible-nav-dropdown {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+}
+.navdd {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+}
+.navbar{
     background-color: rgb(113, 85, 170);
     color: white;
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #midnavitem{
     display:inline-block;
@@ -46,10 +58,17 @@ a:hover {
 }
 span {
     color:white;
-    font-size: 18px;
+    font-size: 22px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     vertical-align: middle;
 }
 tabo {
-    color: black
+    margin-top: 20px;
+}
+#noanim-tab-example{
+    color: black;
+} 
+.tabb{
+    /* margin-top: 90px; */
+    display: block;
 }
