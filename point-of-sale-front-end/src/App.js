@@ -12,6 +12,7 @@ import AddCashier from "./AddCashier.js";
 import AddCategory from "./AddCategory.js";
 import ViewCashier from "./ViewCashiers.js";
 import ReportAnalysis from "./Reports.js";
+import CustomerInfo from "./CustomerInfo.js";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
     //<AddProduct/>
     //<ViewCashier/>
     //<ReportAnalysis/>
-    <Dashboard/>
+    //<Dashboard/>
+    <CustomerInfo/>
   );
 }
 

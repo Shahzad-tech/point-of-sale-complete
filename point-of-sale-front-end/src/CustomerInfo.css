@@ -1,7 +1,12 @@
 body {
     background-color: rgb(230, 230, 250);
 }
-
+.navbar{
+    background-color: rgb(113, 85, 170);
+    color: white;
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 .tab__bar, .form__info {
     margin-top: 5em;
