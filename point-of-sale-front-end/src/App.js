@@ -11,15 +11,18 @@ import Product from './productmain';
 import AddCashier from "./AddCashier.js";
 import AddCategory from "./AddCategory.js";
 import ViewCashier from "./ViewCashiers.js";
+import ReportAnalysis from "./Reports.js";
 
 function App() {
   return (
     //<Cashier/>
     //<ProductEdit/>
-    <Product/>
+    //<Product/>
     //<AddCashier/>
     //<AddProduct/>
     //<ViewCashier/>
+    //<ReportAnalysis/>
+    <Dashboard/>
   );
 }
 

@@ -6,6 +6,8 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
+import { NavLink,NavDropdown, Nav, Navbar} from 'react-bootstrap';
+import { IoPeople } from "react-icons/io5";
 import './DashboardAdmin.css'
 const images = [
     {
@@ -113,18 +115,20 @@ const useStyles = makeStyles((theme) => ({
 function Dashboard() {
   const classes = useStyles();
   return (
+    <div>
+    <Navbar collapseOnSelect expand="md" sticky="top" className="navbar">
+        <Navbar.Brand href="./DasboardAdmin.js" style={{color:"white"}}>SMAART ADMIN PANEL</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav class="ml-auto">
+            <NavLink>
+              <span>AdminName</span>
+              <IoPeople  style={{color: 'white', marginLeft:'4px'}} size={32}/>
+            </NavLink>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     <div className="mb-15">
-      <AppBar className='appbar' style={{backgroundColor: 'rgb(230,230,250)', color: 'rgb(113, 85, 170)'}}>
-        <Toolbar>
-          <Typography variant="h5">SMAART Admin Dashboard</Typography>
-          <div className="offset-8"> 
-            <IconButton >
-              <p>AdminName</p>
-              <SupervisorAccountIcon fontSize='large' style={{color: 'rgb(113, 85, 170)'}}/>
-            </IconButton>
-          </div>
-        </Toolbar>        
-      </AppBar>
       <div className={classes.root}>
         {images.map((image) => (
           <ButtonBase
@@ -148,7 +152,7 @@ function Dashboard() {
           </ButtonBase>
         ))}
       </div>
-    </div>
+    </div></div>
   );
 }
 

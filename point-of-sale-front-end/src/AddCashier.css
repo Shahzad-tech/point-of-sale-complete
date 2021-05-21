@@ -21,3 +21,6 @@ span {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     vertical-align: middle;
 }
+body {
+    background-color: rgb(230,230,250);
+}

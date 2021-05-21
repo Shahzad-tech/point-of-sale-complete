@@ -36,3 +36,6 @@ form{
     width: 11.5em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+body {
+    background-color: rgb(230,230,250);
+}

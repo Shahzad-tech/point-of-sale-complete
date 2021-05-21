@@ -25,3 +25,6 @@ NavbarBrand{
 .mystyle{
     border-right: 1px solid grey;
 }
+body {
+    background-color: rgb(230,230,250);
+}

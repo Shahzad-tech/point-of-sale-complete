@@ -1,3 +1,6 @@
+body {
+    background-color: rgb(230,230,250);
+}
 .topcolumn{
     /* border: 1px solid black; */
     justify-content: end;

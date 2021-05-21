@@ -29,3 +29,6 @@
     width: 11.5em;
     font-family: monospace;
 }
+body {
+    background-color: rgb(230,230,250);
+}
