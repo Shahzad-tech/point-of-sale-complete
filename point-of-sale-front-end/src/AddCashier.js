@@ -107,7 +107,7 @@ function AddCashier(){
                         <Row>
                             <Col sm='12'>
                                 <FormGroup>
-                                <Label for="exampleFile">Upload Model</Label>
+                                <Label for="exampleFile">Upload Image</Label>
                                 <br/>
                                 <Input type="file" name="file" id="exampleFile" />
                                 {/* <FormText color="muted">

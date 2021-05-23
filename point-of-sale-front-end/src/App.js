@@ -14,8 +14,20 @@ import ViewCashier from "./ViewCashiers.js";
 import ReportAnalysis from "./Reports.js";
 import CustomerInfo from "./CustomerInfo.js";
 import NavbarCustom from "./Navbar.js";
+import Main from "./MainAppScreen.js";
+import Axios from "axios";
 
 function App() {
+  Axios({
+    method: "GET",
+    url: "http://localhost:5000/",
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }).then(res => {
+    console.log(res.data);
+  });
+  
   return (
     //<Cashier/>
     //<ProductEdit/>
@@ -26,7 +38,8 @@ function App() {
     //<ReportAnalysis/>
     //<Dashboard/>
     //<CustomerInfo/>
-    <NavbarCustom/>
+    //<NavbarCustom/>
+    <Main/>
   );
 }
 

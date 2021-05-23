@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Lock, People } from 'react-bootstrap-icons';
 import {Row, Col, Container, Button} from 'react-bootstrap';
 
-function App() {
+function Main() {
   return (
     <Container className="bg">
       <Row className="box">
@@ -41,4 +41,4 @@ function App() {
   );
 }
 
-export default App;
+export default Main;
