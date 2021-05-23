@@ -29,10 +29,6 @@ Input::placeholder{
     font-size: 22px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-#midnavitem{
-    display:inline-block;
-    text-align: center;
-}
 a {
     color:white;
     font-size: 15px;

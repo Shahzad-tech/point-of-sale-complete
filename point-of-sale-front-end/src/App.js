@@ -13,6 +13,7 @@ import AddCategory from "./AddCategory.js";
 import ViewCashier from "./ViewCashiers.js";
 import ReportAnalysis from "./Reports.js";
 import CustomerInfo from "./CustomerInfo.js";
+import NavbarCustom from "./Navbar.js";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
     //<ViewCashier/>
     //<ReportAnalysis/>
     //<Dashboard/>
-    <CustomerInfo/>
+    //<CustomerInfo/>
+    <NavbarCustom/>
   );
 }
 
