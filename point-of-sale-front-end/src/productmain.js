@@ -1,42 +1,17 @@
 import Button from '@material-ui/core/Button';
 import {Table,Row,Col,InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
-import './productmain.css'
+import './ProductMain.css';
 import React, { useState } from 'react';
 import { IoMdSearch } from "react-icons/io";
-import { IoPeople } from "react-icons/io5";
-import { NavLink,NavDropdown, Nav, Navbar} from 'react-bootstrap';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
+import NavbarCustom from './Navbar.js';
+
 
 function Product(){
   return(
     <div >
-      <Navbar collapseOnSelect expand="md" sticky="top" className="navbar">
-        <Navbar.Brand href="./DasboardAdmin.js" style={{color:"white"}}>SMAART ADMIN PANEL</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav class="offset-md-4">
-            <NavDropdown title="Merchandise" id="collasible-nav-dropdown">
-              <NavDropdown.Item className="navdd">Dashboard</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item className="navdd">Shopkeeper Details</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item className="navdd">Customer</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item className="navdd">POS</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item className="navdd">Sales Analysis</NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          <Nav class="ml-auto">
-            <NavLink>
-              <span>AdminName</span>
-              <IoPeople  style={{color: 'white', marginLeft:'4px'}} size={32}/>
-            </NavLink>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-      <br/>
+      <NavbarCustom title="Merchandise Management" dd1="Dashboard" dd2="POS" dd3="Cashier Registration" dd4="Customer Details" dd5="Sales Analysis"/>
       <Tabs defaultActiveKey="Product" transition={false} id="noanim-tab-example">
         <Tab eventKey="Product" title="Product" tabClassName="tab-title">
             <Row className="container-fluid">

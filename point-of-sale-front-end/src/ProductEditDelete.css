@@ -1,5 +1,5 @@
-#col{
-    /* border: 1px solid black; */
+body {
+    background-color: rgb(230,230,250);
 }
 #editbutton{
     background-color:orange;
@@ -28,7 +28,4 @@
     border-color: rgb(113, 85, 170);
     width: 11.5em;
     font-family: monospace;
-}
-body {
-    background-color: rgb(230,230,250);
 }

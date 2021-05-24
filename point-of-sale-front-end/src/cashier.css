@@ -1,3 +1,6 @@
+body {
+    background-color: rgb(230,230,250);
+}
 .upperrow{
     margin-top: 70px;
 }
@@ -19,12 +22,6 @@ h1,h4{
 div{
     margin-bottom: 5px;
 }
-NavbarBrand{
-    margin-left: 7px;
-}
 .mystyle{
     border-right: 1px solid grey;
-}
-body {
-    background-color: rgb(230,230,250);
 }

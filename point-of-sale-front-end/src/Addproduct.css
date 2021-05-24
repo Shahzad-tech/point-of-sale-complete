@@ -1,3 +1,6 @@
+body {
+    background-color: rgb(230,230,250);
+}
 #categorycolumn{
     float: right;
     /* border: 1px solid black; */
@@ -35,7 +38,4 @@ form{
     border-color: rgb(113, 85, 170);
     width: 11.5em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-body {
-    background-color: rgb(230,230,250);
 }

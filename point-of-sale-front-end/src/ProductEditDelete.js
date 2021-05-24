@@ -1,47 +1,16 @@
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    Jumbotron,
-    Row,
-    Col,
-    Button
-  } from 'reactstrap';
-
+import {Jumbotron, Row, Col, Button} from 'reactstrap';
 import './ProductEditDelete.css'
 import React, { useState } from 'react';
 import { BsPencil } from "react-icons/bs";
 import { FiDelete } from "react-icons/fi";
 import { Table } from 'reactstrap';
+import NavbarCustom from './Navbar.js';
 
 function ProductEdit(){
-
-    const [isOpen, setIsOpen] = useState(false); //navbar things
-    const toggle = () => setIsOpen(!isOpen); //navbarthings
-
     return(
-        <div>
-            <Navbar id="navbar" expand="md">
-                    <NavbarBrand href="/">POS</NavbarBrand>
-                    <NavbarToggler onClick={toggle} />
-                    <Collapse isOpen={isOpen} navbar>
-                    <Nav className="mr-auto" navbar>
-                        <NavItem id="midnavitem">
-                        <NavLink href="/components/">Products</NavLink>
-                        </NavItem>
-                        
-                    </Nav>
-                    </Collapse>
-            </Navbar>
-            
-            <Jumbotron>
-            
-           
-            
+        <div>            
+            <NavbarCustom title="Merchandise Management" dd1="Dashboard" dd2="POS" dd3="Cashier Registration" dd4="Customer Details" dd5="Sales Analysis"/>
+            <div className="container-fluid">
             <Col id="col" md='12'>    
             <Row>
                 <Col id="col" sm='12' md='2'>
@@ -99,9 +68,7 @@ function ProductEdit(){
                 </Table>
             </Col>
             </Row>
-          
-            </Jumbotron>
-
+            </div>
         </div>
     )
 }
