@@ -101,6 +101,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: theme.palette.common.black,
       opacity: 0.4,
       transition: theme.transitions.create('opacity'),
+      borderRadius: '25px'
     },
     imageTitle: {
       position: 'relative',
@@ -149,7 +150,7 @@ function Dashboard() {
               marginTop: '5%',  
             }}>
               <Link to={`/admin/${image.route}`}>
-                <span className={classes.imageSrc} style={{backgroundImage: `url(${image.url})`,}}/>
+                <span className={classes.imageSrc} style={{backgroundImage: `url(${image.url})`,borderRadius:'25px'}}/>
                 <span className={classes.imageBackdrop} />
                 <span className={classes.imageButton}>
                   <Typography component="span" variant="subtitle2" color="inherit" className={classes.imageTitle}>

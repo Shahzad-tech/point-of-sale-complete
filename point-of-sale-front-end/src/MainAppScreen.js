@@ -1,4 +1,4 @@
-import './App.css';
+import './MainAppScreen.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Lock, People } from 'react-bootstrap-icons';
@@ -25,11 +25,11 @@ function Main() {
           </Row>
           <form>
             <Row className="rowss">
-              <People color="rgb(113, 85, 170)" size={20} />
+              <People color="rgb(100, 41, 117)" size={20} />
               <input type='text' placeholder='Username' name='name'/>
             </Row> 
             <Row className="rowss">
-              <Lock color="rgb(113, 85, 170)" size={20} />
+              <Lock color="rgb(100, 41, 117)" size={20} />
               <input type='password' placeholder='Password' name='password'/>
             </Row>
             <Row className="rowss">

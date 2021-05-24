@@ -28,7 +28,7 @@ function Product(){
                   </Col>
                   <Col sm="5" className="topcolumn">
                     <Link to="/admin/merchandise/addproduct">
-                      <Button as="input" type="submit" style={{ color:"white", float:'right', backgroundColor:'rgb(113, 85, 170)', borderRadius:'22px', fontSize:"20px", fontFamily:'Verdana'}}>Add Product</Button>
+                      <Button as="input" type="submit" style={{ color:"white", float:'right', backgroundColor:'rgb(100, 41, 117)', borderRadius:'22px', fontSize:"20px", fontFamily:'Verdana'}}>Add Product</Button>
                     </Link>
                   </Col>
             </Row>
@@ -94,7 +94,7 @@ function Product(){
                 </Col>
                 <Col sm="5" className="topcolumn">
                   <Link to="/admin/merchandise/addcategory">
-                    <Button as="input" type="submit" style={{ color:"white", float:'right', backgroundColor:'rgb(113, 85, 170)', borderRadius:'22px', fontSize:'20px', fontFamily:'Verdana'}}>Add Category</Button>
+                    <Button as="input" type="submit" style={{ color:"white", float:'right', backgroundColor:'rgb(100, 41, 117)', borderRadius:'22px', fontSize:'20px', fontFamily:'Verdana'}}>Add Category</Button>
                   </Link>
                 </Col>
             </Row>

@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: rgb(230,230,250);
 }
 .brand {
@@ -21,8 +21,8 @@ body {
   height: 100%;
 }
 #but {
-  background-color: rgb(113, 85, 170);
-  border-color: rgb(113, 85, 170);
+  background-color: rgb(100, 41, 117);
+  border-color: rgb(100, 41, 117);
   width: 11.5em;
   border-radius: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -41,8 +41,7 @@ input {
   border-top-width: 0px;
   border-left-width: 0px;
   border-right-width: 0px;
-  border-color: rgb(113, 85, 170);
-  
+  border-color: rgb(100, 41, 117);
 }
 input:placeholder {
   text-align: center;
@@ -79,4 +78,4 @@ input:focus {
   font-size: 30px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+ */
