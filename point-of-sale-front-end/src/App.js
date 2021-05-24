@@ -29,6 +29,7 @@ function App() {
 
   return (
     <Router>
+      {/* <img top width="100%" src='./bg3.jfif' alt="Card image cap" /> */}
       <Switch>
         <Route path="/" exact component={Main}/>
         <Route path="/admin/dashboard" exact component={Dashboard}/>
