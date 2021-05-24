@@ -4,11 +4,12 @@ import {Table,Row,Col,InputGroup, InputGroupAddon, InputGroupText, Input, Button
 import { IoMdSearch } from "react-icons/io";
 import React, { useState } from 'react';
 import NavbarCustom from './Navbar.js';
+import { Link } from 'react-router-dom';
 
 function ViewCashier(){
     return(
         <div>
-            <NavbarCustom title="Cashier Registration" dd1="Dashboard" dd2="POS" dd3="Merchandise Management" dd4="Customer Details" dd5="Sales Analysis"/>
+            <NavbarCustom title="Cashier Registration" dd1="Dashboard" dd1Route="dashboard" dd2="POS" dd2Route="pos" dd3="Merchandise Management" dd3Route="merchandise" dd4="Customer Details" dd4Route="customer" dd5="Sales Analysis" dd5Route="sales"/>
             <br/>
             <Row className="container-fluid">
                   <Col sm="7">
@@ -22,7 +23,9 @@ function ViewCashier(){
                     <InputGroup></InputGroup>
                   </Col>
                   <Col sm="5" className="topcolumn">
-                    <Button as="input" type="submit" style={{ color:"white", float:'right', backgroundColor:'rgb(113, 85, 170)', borderRadius:'22px', fontSize:'20px', fontFamily:'Verdana'}} >Add New Cashier</Button>
+                    <Link to="/admin/cashier/addcashier">
+                      <Button as="input" type="submit" style={{ color:"white", float:'right', backgroundColor:'rgb(113, 85, 170)', borderRadius:'22px', fontSize:'20px', fontFamily:'Verdana'}} >Add New Cashier</Button>
+                    </Link>
                   </Col>
             </Row>
             <div class="container-fluid">

@@ -1,14 +1,14 @@
-import axios from 'axios'
+import axios from 'axios';
 
-const api = axios.create({
+const RestAPI = axios.create({
     baseURL: 'http://localhost:5000/',
-})
+});
 
-export const insertMovie = payload => api.post(`/movie`, payload)
-export const getAllMovies = () => api.get(`/movies`)
-export const updateMovieById = (id, payload) => api.put(`/movie/${id}`, payload)
-export const deleteMovieById = id => api.delete(`/movie/${id}`)
-export const getMovieById = id => api.get(`/movie/${id}`)
+export const insertMovie = payload => RestAPI.post(`/movie`, payload)
+export const getAllMovies = () => RestAPI.get(`/movies`)
+export const updateMovieById = (id, payload) => RestAPI.put(`/movie/${id}`, payload)
+export const deleteMovieById = id => RestAPI.delete(`/movie/${id}`)
+export const getMovieById = id => RestAPI.get(`/movie/${id}`)
 
 const apis = {
     insertMovie,

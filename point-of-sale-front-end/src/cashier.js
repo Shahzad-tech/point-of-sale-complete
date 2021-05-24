@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Button } from 'reactstrap';
-import NavbarCustom from './Navbar.js';
 import './Cashier.css';
+import { Link } from 'react-router-dom';
 
 function Cashier(){
     return(
         <div>
-            <NavbarCustom title="Cashier" dd1="Dashboard" dd2="Dashboard" dd3="Dashboard" dd4="Dashboard" dd5="Dashboard"/>
             <br/>
             <Container>
                 <Row className= "upperrow" >

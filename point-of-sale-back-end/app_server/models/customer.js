@@ -13,7 +13,7 @@ var CustomerSchema = new Schema({
     picture: {
         type: Buffer,
         required: true,
-    }
+    },
 });
 
 module.exports = mongoose.model('Customer', CustomerSchema);

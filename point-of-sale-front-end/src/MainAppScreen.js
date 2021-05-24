@@ -3,6 +3,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Lock, People } from 'react-bootstrap-icons';
 import {Row, Col, Container, Button} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Main() {
   return (
@@ -32,7 +33,9 @@ function Main() {
               <input type='password' placeholder='Password' name='password'/>
             </Row>
             <Row className="rowss">
-              <Button id="but" as="input" type="submit" value="Continue        >" />{' '}
+              <Link to="/pos">
+                <Button id="but" as="input" type="submit" value="Continue            >" />{' '}
+              </Link>
             </Row>
           </form>
         </Col>

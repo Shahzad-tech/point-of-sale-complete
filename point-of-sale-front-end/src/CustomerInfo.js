@@ -8,6 +8,7 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import './CustomerInfo.css';
 import NavbarCustom from './Navbar.js';
+import { Link } from 'react-router-dom';
 
 const top100Films = [
     { title: 'The Shawshank Redemption', year: 1994 },
@@ -19,7 +20,7 @@ export default function CustomerInfo() {
 
     return(
         <div> 
-            <NavbarCustom title="Customer Details" dd1="Dashboard" dd2="POS" dd3="Merchandise Management" dd4="Cashier Registration" dd5="Sales Analysis"/>
+            <NavbarCustom title="Customer Details" dd1="Dashboard" dd1Route="dashboard" dd2="POS" dd2Route="pos" dd3="Merchandise Management" dd3Route="merchandise" dd4="Cashier Registration" dd4Route="cashier" dd5="Sales Analysis" dd5Route="sales"/>
             <br/>
             <Container fluid>
                 <Row>

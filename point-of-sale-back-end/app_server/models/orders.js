@@ -1,15 +1,24 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-
+//sales analysis will be done using this schema
 var OrderSchema = new Schema({
-    customer: {
+    // customer: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'Customer',
+    //     required: true,
+    // },
+    // products: {
+    //     type: [{
+    //         sid: {
+    //             type: Schema.Types.ObjectId,
+    //             ref: 'Product',
+    //         }
+    //     }],
+    //     required: true,
+    // },
+    cart:{
         type: Schema.Types.ObjectId,
-        ref: 'Customer',
-        required: true,
-    },
-    product: {
-        type: Schema.Types.ObjectId,
-        ref: 'Product',
+        ref: 'Cart',
         required: true,
     },
     date: {
@@ -23,7 +32,11 @@ var OrderSchema = new Schema({
     itemCount: {
         type: Number,
         required: true,
-    }
+    },
+    orderNo: {
+        type: Number,
+        required: true,
+    },
 });
 
 module.exports = mongoose.model('Order', OrderSchema);

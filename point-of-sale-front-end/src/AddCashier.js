@@ -2,17 +2,20 @@ import './AddCashier.css';
 import { Row,Col,Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import NavbarCustom from './Navbar.js';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function AddCashier(){
     return(
         <div>
-            <NavbarCustom title="Cashier Registration" dd1="Dashboard" dd2="POS" dd3="Merchandise Management" dd4="Customer Details" dd5="Sales Analysis"/>
+            <NavbarCustom title="Cashier Registration" dd1="Dashboard" dd1Route="dashboard" dd2="POS" dd2Route="pos" dd3="Merchandise Management" dd3Route="merchandise" dd4="Customer Details" dd4Route="customer" dd5="Sales Analysis" dd5Route="sales"/>
             <div className="container-fluid">
                 <Row sm='12'>
                     <Col sm='2'>
-                        <Button id ="buto" as="input" type="submit" class="topbutton">
-                            Back
-                        </Button>
+                        <Link to="/admin/cashier">
+                            <Button id ="buto" as="input" type="submit" class="topbutton">
+                                Back
+                            </Button>
+                        </Link>
                     </Col>
                 </Row>
                 <Row sm='12'>

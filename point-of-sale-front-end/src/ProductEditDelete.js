@@ -5,11 +5,12 @@ import { BsPencil } from "react-icons/bs";
 import { FiDelete } from "react-icons/fi";
 import { Table } from 'reactstrap';
 import NavbarCustom from './Navbar.js';
+import { Link } from 'react-router-dom';
 
 function ProductEdit(){
     return(
         <div>            
-            <NavbarCustom title="Merchandise Management" dd1="Dashboard" dd2="POS" dd3="Cashier Registration" dd4="Customer Details" dd5="Sales Analysis"/>
+            <NavbarCustom title="Merchandise Management" dd1="Dashboard" dd1Route="dashboard" dd2="POS" dd2Route="pos" dd3="Cashier Registration" dd3Route="cashier" dd4="Customer Details" dd4Router="customer" dd5="Sales Analysis" dd5Route="sales"/>
             <div className="container-fluid">
             <Col id="col" md='12'>    
             <Row>
