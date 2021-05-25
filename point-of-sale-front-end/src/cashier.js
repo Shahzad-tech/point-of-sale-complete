@@ -73,10 +73,6 @@ function Cashier(){
                     <Button  color="danger" className="btn text-light twobuttons offset-9" >Proceed to checkout</Button>
 
                     </Col>
-
-
-                    
-                    
                     </Col>
                 </Row>
             

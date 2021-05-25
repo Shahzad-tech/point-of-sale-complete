@@ -12,7 +12,7 @@ var CustomerSchema = new Schema({
     },
     picture: {
         type: Buffer,
-        required: true,
+        required: false,  //should be true when ar and face recognition is connected
     },
 });
 

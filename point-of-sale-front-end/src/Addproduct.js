@@ -11,7 +11,7 @@ function AddProduct(){
             <div className="container-fluid">
                 <Row sm='12'>
                     <Col sm='2'>
-                        <Button id ="buto" as="input" type="submit" class="topbutton">
+                        <Button id ="buto" as="input" type="submit" className="topbutton">
                             <Link to="/admin/merchandise">Back</Link>
                         </Button>
                     </Col>

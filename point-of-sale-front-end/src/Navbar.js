@@ -11,7 +11,7 @@ function NavbarCustom(props){
             <Link to ="/admin/dashboard"><Navbar.Brand style={{color:"white"}}>SMAART ADMIN PANEL</Navbar.Brand></Link>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav class="offset-md-4">
+                <Nav className="offset-md-4">
                 <NavDropdown title={props.title} id="collasible-nav-dropdown">
                     <Link to ={`/admin/${props.dd1Route}`}>
                         <NavDropdown.Item className="navdd">{props.dd1}</NavDropdown.Item>
@@ -34,7 +34,7 @@ function NavbarCustom(props){
                     </Link>
                 </NavDropdown>
                 </Nav>
-                <Nav class="ml-auto">
+                <Nav className="ml-auto">
                 <NavLink>
                     <span>AdminName</span>
                     <IoPeople  style={{color: 'white', marginLeft:'4px'}} size={32}/>

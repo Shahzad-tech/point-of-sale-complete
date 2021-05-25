@@ -1,15 +1,41 @@
 import Button from '@material-ui/core/Button';
 import {Table,Row,Col,InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
 import './ProductMain.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { IoMdSearch } from "react-icons/io";
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import NavbarCustom from './Navbar.js';
 import { Link } from 'react-router-dom';
-
+import axios from 'axios';
 
 function Product(){
+  const[product, setProduct] = useState([]);
+  const[category, setCategory] = useState([]);
+
+  useEffect(() => {
+    getProductList();
+    getCategoryList();
+  },[]);
+
+  const getProductList = () => {
+    axios.get('http://localhost:5000/products').then((response) => {
+      const data = response.data;
+      setProduct(data);
+      console.log(data);
+    }).catch(() => {console.log('unable to receive data')
+    });
+  }
+
+  const getCategoryList = () => {
+    axios.get('http://localhost:5000/categories').then((response) => {
+      const data = response.data;
+      setCategory(data);
+      console.log(data);
+    }).catch(() => {console.log('unable to receive data')
+    });
+  }
+
   return(
     <div >
       <NavbarCustom title="Merchandise Management" dd1="Dashboard" dd1Route="dashboard" dd2="POS" dd2Route="pos" dd3="Cashier Registration" dd3Route="cashier" dd4="Customer Details" dd4Router="customer" dd5="Sales Analysis" dd5Route="sales"/>
@@ -32,8 +58,9 @@ function Product(){
                     </Link>
                   </Col>
             </Row>
-            <div class="container-fluid">
+            <div className="container-fluid">
               <Row>
+                <p>{product.error}</p>
                 <Col sm="12">
                   <Table hover>
                     <thead>
@@ -98,8 +125,9 @@ function Product(){
                   </Link>
                 </Col>
             </Row>
-            <div class="container-fluid">
+            <div className="container-fluid">
               <Row>
+                <p>{category.error}</p>
                 <Col sm="12">
                   <Table hover>
                     <thead>

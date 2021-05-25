@@ -15,7 +15,7 @@ function ProductEdit(){
             <Col id="col" md='12'>    
             <Row>
                 <Col id="col" sm='12' md='2'>
-                <Button id="buto" as="input" type="submit" class="topbutton" onClick={event =>  window.location.href='./Addproduct'}>
+                <Button id="buto" as="input" type="submit" className="topbutton" onClick={event =>  window.location.href='./Addproduct'}>
                 Back
                 </Button>
                 </Col>
@@ -25,10 +25,10 @@ function ProductEdit(){
                 </h4>
                 </Col>
                 <Col sm='12' md='4' id="buttonCols">
-                <Button id ="editbutton"as="input" type="submit" class="topbutton" >
+                <Button id ="editbutton"as="input" type="submit" className="topbutton" >
                 <span className="mr-2"><BsPencil/></span>Edit
                 </Button>
-                <Button id="deletebutton" as="input" type="submit" class="topbutton" >
+                <Button id="deletebutton" as="input" type="submit" className="topbutton" >
                <span className="mr-2"><FiDelete/></span>
                 Delete
                 </Button>

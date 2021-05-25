@@ -12,7 +12,7 @@ function AddCashier(){
                 <Row sm='12'>
                     <Col sm='2'>
                         <Link to="/admin/cashier">
-                            <Button id ="buto" as="input" type="submit" class="topbutton">
+                            <Button id ="buto" as="input" type="submit" className="topbutton">
                                 Back
                             </Button>
                         </Link>

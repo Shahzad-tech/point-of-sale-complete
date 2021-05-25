@@ -128,7 +128,7 @@ function Dashboard() {
         <Link to="/admin/dashboard"><Navbar.Brand style={{color:"white"}}>SMAART ADMIN PANEL</Navbar.Brand></Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav class="ml-auto">
+          <Nav className="ml-auto">
             <NavLink>
               <span>AdminName</span>
               <IoPeople  style={{color: 'white', marginLeft:'4px'}} size={32}/>

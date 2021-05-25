@@ -17,11 +17,26 @@ const top100Films = [
 ]
 
 export default function CustomerInfo() {
+    const[customer, setCustomer] = useState([]);
+    //const[category, setCategory] = useState([]);
 
+    useEffect(() => {
+        getCustomerList();
+    },[]);
+
+    const getCustomerList = () => {
+        axios.get('http://localhost:5000/customers').then((response) => {
+        const data = response.data;
+        setCustomer(data);
+        console.log(data);
+        }).catch(() => {console.log('unable to receive data')
+        });
+    }
     return(
         <div> 
             <NavbarCustom title="Customer Details" dd1="Dashboard" dd1Route="dashboard" dd2="POS" dd2Route="pos" dd3="Merchandise Management" dd3Route="merchandise" dd4="Cashier Registration" dd4Route="cashier" dd5="Sales Analysis" dd5Route="sales"/>
             <br/>
+            <p>{customer.error}</p>
             <Container fluid>
                 <Row>
                     <Col xs lg={4} className='tab__bar'>
