@@ -21,10 +21,10 @@ var CartSchema = new Schema({
         }],
         // required: true,
     },
-    cartNo: {
-        type: Number,
-        // required: true,
-    },
+    // cartNo: {
+    //     type: Number,
+    //     // required: true,
+    // },
 });
 
 module.exports = mongoose.model('Cart', CartSchema);

@@ -25,3 +25,30 @@ module.exports.getCustomerById = async (req, res, next) => {
         .catch((err) => next(err));
 }
 
+module.exports.addCustomer = (req, res, next) => {
+    const body = req.body
+    if (!body) {
+        return res.status(400).json({
+            success: false,
+            error: 'no input provided',
+        })
+    }
+    const customer = new Customer(body)
+
+    if (!customer) {
+        return res.status(400).json({error: err })
+    }
+    customer.save().then(() => {
+        return res.status(201).json({
+            success: true,
+            id: customer._id,
+            message: 'customer created successfully',
+        })
+    }).catch(error => {
+        return res.status(400).json({
+            error,
+            message: 'an error occured while creating customer',
+        })
+    })
+}
+  

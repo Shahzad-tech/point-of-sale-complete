@@ -33,10 +33,10 @@ var OrderSchema = new Schema({
         type: Number,
         // required: true,
     },
-    orderNo: {
-        type: Number,
-        // required: true,
-    },
+    // orderNo: {
+    //     type: Number,
+    //     // required: true,
+    // },
 },
 {
     timestamps : {
