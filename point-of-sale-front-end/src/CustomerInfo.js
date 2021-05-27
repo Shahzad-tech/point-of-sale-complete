@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
@@ -9,6 +9,7 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import './CustomerInfo.css';
 import NavbarCustom from './Navbar.js';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const top100Films = [
     { title: 'The Shawshank Redemption', year: 1994 },

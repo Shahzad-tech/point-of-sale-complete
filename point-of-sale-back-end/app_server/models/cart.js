@@ -5,24 +5,25 @@ var CartSchema = new Schema({
     customer: {
         type: Schema.Types.ObjectId,
         ref: 'Customer',
-        required: true,
+        // required: true,
     },
     products: {
         type: [{
             sid: {
                 type: Schema.Types.ObjectId,
                 ref: 'Product',
+                // required: true,
             },
             quantity:{
                 type: Number,
-                required: true,
+                // required: true,
             }
         }],
-        required: true,
+        // required: true,
     },
     cartNo: {
         type: Number,
-        required: true,
+        // required: true,
     },
 });
 

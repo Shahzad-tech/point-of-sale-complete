@@ -6,12 +6,22 @@ var Customer = require('../models/customer');
 module.exports.getCustomers = async (req, res, next) => {
   await Customer.find({}, (err,customers) => {
       if(err) {
-          return res.status(400).json({success: false, error: err})
+          return res.status(400).json(err)
       }
       if(!customers.length) {
-          return res.status(200).json({success: false, error: "Customers not found"})
+          return res.status(200).json("Customers not found")
       }
-      return res.status(200).json({success: true, data: customers})
+      return res.status(200).json(customers)
   }).catch(err => console.log(err))
+}
+
+module.exports.getCustomerById = async (req, res, next) => {
+    await Customer.findById(req.params.id)
+        .then((customer) => {
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.json(customer);
+        }, (err) => next(err))
+        .catch((err) => next(err));
 }
 

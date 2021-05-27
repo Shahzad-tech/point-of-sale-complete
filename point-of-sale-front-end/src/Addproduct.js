@@ -1,10 +1,26 @@
 import { Row,Col,Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import './Addproduct.css';
 import NavbarCustom from './Navbar.js';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 function AddProduct(){
+    const[category, setCategory] = useState([]);
+
+    useEffect(() => {
+        getCategoryList();
+    },[]);
+
+  const getCategoryList = () => {
+    axios.get('http://localhost:5000/categories').then((response) => {
+      const data = response.data;
+      setCategory(data);
+      console.log(data);
+    }).catch(() => {console.log('unable to receive data')
+    });
+  }
+
     return(
         <div>
             <NavbarCustom title="Merchandise Management" dd1="Dashboard" dd1Route="dashboard" dd2="POS" dd2Route="pos" dd3="Cashier Registration" dd3Route="cashier" dd4="Customer Details" dd4Router="customer" dd5="Sales Analysis" dd5Route="sales"/>

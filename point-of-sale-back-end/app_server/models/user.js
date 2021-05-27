@@ -1,39 +1,42 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var CashierSchema = new Schema({
+var UserSchema = new Schema({
     name : {
         type: String,
-        required: true,
+        // required: true,
+    },
+    role :{
+        type: String,
     },
     counterNo : {
         type: Number,
-        required: true,
+        // required: true,
     },
     dOb : {
         type: Date,
-        required: false,
+        // required: false,
     },
     address : {
         type: String, 
-        required: true,
+        // required: true,
     },
     contactNo: {
         type: String,
-        required: true,
+        // required: true,
     },
     username: {
         type: String,
-        required: true,
+        // required: true,
     },
     password: {
         type: String,
-        required: true,
+        // required: true,
     },
     picture: {
         type: Buffer,
-        required: false,
+        // required: false,
     }
 });
-
-module.exports = mongoose.model('Cashier', CashierSchema);
+//should be a user schema instead with role as cashier or admin
+module.exports = mongoose.model('User', UserSchema);

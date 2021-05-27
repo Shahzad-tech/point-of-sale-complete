@@ -10,8 +10,8 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 function Product(){
-  const[product, setProduct] = useState([]);
-  const[category, setCategory] = useState([]);
+  const[products, setProduct] = useState([]);
+  const[categories, setCategory] = useState([]);
 
   useEffect(() => {
     getProductList();
@@ -60,7 +60,6 @@ function Product(){
             </Row>
             <div className="container-fluid">
               <Row>
-                <p>{product.error}</p>
                 <Col sm="12">
                   <Table hover>
                     <thead>
@@ -87,20 +86,17 @@ function Product(){
                         <td>2</td>
                         <td>600$</td>
                       </tr>
-                      <tr>
-                        <td scope="row"></td>
-                        <td>Modern Warfare</td>
-                        <td>Shirts</td>
-                        <td>4</td>
-                        <td>1200$</td>
-                      </tr>
-                      <tr>
-                        <td scope="row"></td>
-                        <td>Girly</td>
-                        <td>Womens</td>
-                        <td>1</td>
-                        <td>129$</td>
-                      </tr>
+                      {products.map(product =>{
+                        return(
+                          <tr key={product._id}>
+                            <td>{product.picture.data}</td>
+                            <td>{product.name}</td>
+                            <td>{product.category.name}</td>
+                            <td>{product.quantity}</td>
+                            <td>{product.price}</td>
+                          </tr>
+                        )
+                      })}
                     </tbody>
                   </Table>
                 </Col>
@@ -127,7 +123,6 @@ function Product(){
             </Row>
             <div className="container-fluid">
               <Row>
-                <p>{category.error}</p>
                 <Col sm="12">
                   <Table hover>
                     <thead>
@@ -148,16 +143,15 @@ function Product(){
                         <td>Rainbow</td>
                         <td>Shirts</td>
                       </tr>
-                      <tr>
-                        <td scope="row"></td>
-                        <td>Modern Warfare</td>
-                        <td>Shirts</td>
-                      </tr>
-                      <tr>
-                        <td scope="row"></td>
-                        <td>Girly</td>
-                        <td>Womens</td>
-                      </tr>
+                      {categories.map(category =>{
+                        return(
+                          <tr key={category._id}>
+                            <td>{category.picture.data}</td>
+                            <td>{category.name}</td>
+                            <td>{category.code}</td>
+                          </tr>
+                        )
+                      })}
                     </tbody>
                   </Table>
                 </Col>

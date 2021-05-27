@@ -4,15 +4,15 @@ var Schema = mongoose.Schema;
 var CustomerSchema = new Schema({
     name : {
         type: String,
-        required: true,
+        // required: true,
     },
     contactNo: {
         type: String,
-        required: false,
+        // required: false,
     },
     picture: {
         type: Buffer,
-        required: false,  //should be true when ar and face recognition is connected
+        // required: false,  //should be true when ar and face recognition is connected
     },
 });
 

@@ -3,7 +3,7 @@ var Admin = require('../models/admin');
 var Product = require('../models/product');
 var Category = require('../models/category');
 var Customer = require('../models/customer');
-var Cashier = require('../models/cashier');
+
 
 module.exports.getProducts = async (req, res, next) => {
     await Product.find({}, (err,products) => {

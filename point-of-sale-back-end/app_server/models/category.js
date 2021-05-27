@@ -4,19 +4,19 @@ var Schema = mongoose.Schema;
 var CategorySchema = new Schema({
     name : {
         type: String,
-        required: true,
+        // required: true,
     },
     code : {
         type: String,
-        required: true,
+        // required: true,
     },
     description: {
         type: String,
-        required: false,
+        // required: false,
     },
     picture: {
         type: Buffer,
-        required: false,
+        // required: false,
     }
 });
 

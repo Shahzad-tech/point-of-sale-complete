@@ -6,17 +6,17 @@ var logger = require('morgan');
 var mongoose = require('mongoose');
 var cors = require("cors");
 
-mongoose.connect('mongodb+srv://noooor:noor12345@cluster0.euyw8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',() =>{console.log("connected")});
+mongoose.connect('mongodb+srv://noooor:noor12345@cluster0.euyw8.mongodb.net/smaartDatabase?retryWrites=true&w=majority',{ useNewUrlParser: true },() =>{console.log("connected")});
 
-var indexRouter = require('./app_server/routes/index');
-var adminRouter = require('./app_server/routes/admin');
+// var adminRouter = require('./app_server/routes/admin');
 // var loginRouter = require('./app_server/routes/login');
 var customerRouter = require('./app_server/routes/customer');
-// var cartRouter = require('./app_server/routes/cart');
+var cartRouter = require('./app_server/routes/cart');
 var cashierRouter = require('./app_server/routes/cashier');
 var categoryRouter = require('./app_server/routes/category');
-// var orderRouter = require('./app_server/routes/order');
+var orderRouter = require('./app_server/routes/order');
 var productRouter = require('./app_server/routes/product');
+var salesRouter = require('./app_server/routes/sales');
 
 var app = express();
 
@@ -31,15 +31,16 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
-app.use('/', indexRouter);
-app.use('/admin', adminRouter);
+
+// app.use('/admin', adminRouter);
 // app.use('/login', loginRouter);
 app.use('/customers', customerRouter);
-// app.use('/cart', cartRouter);
+app.use('/carts', cartRouter);
 app.use('/cashiers', cashierRouter);
 app.use('/categories', categoryRouter);
-// app.use('/order', orderRouter);
+app.use('/orders', orderRouter);
 app.use('/products', productRouter);
+app.use('/sales', salesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

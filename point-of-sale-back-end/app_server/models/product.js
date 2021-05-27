@@ -4,28 +4,28 @@ var Schema = mongoose.Schema;
 var ProductSchema = new Schema({
     name : {
         type: String,
-        required: true,
+        // required: true,
     },
     category : {
         type: Schema.Types.ObjectId,
         ref: 'Category',
-        required: true,
+        // required: true,
     },
     description: {
         type: String,
-        required: false,
+        // required: false,
     },
     quantity: {
         type: Number,
-        required: true,
+        // required: true,
     },
     price: {
         type: Number,
-        required: true,
+        // required: true,
     },
     picture: {
         type: Buffer,
-        required: false,
+        // required: false,
     }
 });
 

@@ -19,24 +19,29 @@ var OrderSchema = new Schema({
     cart:{
         type: Schema.Types.ObjectId,
         ref: 'Cart',
-        required: true,
+        // required: true,
     },
-    date: {
-        type: Date,
-        required: true,
-    },
+    // date: {
+    //     type: Date,
+    //     // required: true,
+    // },
     total: {
         type: Number,
-        required: true,
+        // required: true,
     }, 
     itemCount: {
         type: Number,
-        required: true,
+        // required: true,
     },
     orderNo: {
         type: Number,
-        required: true,
+        // required: true,
     },
+},
+{
+    timestamps : {
+        createdAt: 'date',
+    }
 });
 
 module.exports = mongoose.model('Order', OrderSchema);

@@ -2,10 +2,10 @@ import './ProductMain.css';
 import './ViewCashier.css';
 import {Table,Row,Col,InputGroup, InputGroupAddon, InputGroupText, Input, Button } from 'reactstrap';
 import { IoMdSearch } from "react-icons/io";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavbarCustom from './Navbar.js';
 import { Link } from 'react-router-dom';
-import customer from '../../point-of-sale-back-end/app_server/models/customer';
+import axios from 'axios';
 
 function ViewCashier(){
 
