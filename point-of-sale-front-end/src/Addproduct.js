@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 function AddProduct(){
-    const[category, setCategory] = useState([]);
+    const[categories, setCategory] = useState([]);
 
     useEffect(() => {
         getCategoryList();
@@ -50,11 +50,11 @@ function AddProduct(){
                                 <FormGroup>
                                     <Label for="exampleSelect">Choose Category</Label>
                                     <Input type="select" name="select" id="exampleSelect">
-                                        <option>Category A</option>
-                                        <option>Category B</option>
-                                        <option>Category C</option>
-                                        <option>Category D</option>
-                                        <option>Category E</option>
+                                    {categories.map(category =>{
+                                        return(
+                                            <option>{category.name}</option>
+                                        )
+                                    })}
                                     </Input>
                                 </FormGroup>
                             </Col>
