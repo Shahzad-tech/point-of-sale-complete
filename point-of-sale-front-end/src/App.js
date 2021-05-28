@@ -13,6 +13,7 @@ import SalesAnalysis from "./Reports.js";
 import CustomerInfo from "./CustomerInfo.js";
 import NavbarCustom from "./Navbar.js";
 import Main from "./MainAppScreen.js";
+import Invoice from "./Invoice.js";
 import Axios from "axios";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -42,6 +43,7 @@ function App() {
         <Route path="/admin/cashier" exact component={ViewCashier}/>
         <Route path="/admin/cashier/addcashier" exact component={AddCashier}/>
         <Route path="/pos" exact component={Cashier}/>
+        <Route path="/pos/checkout" exact component={Invoice}/>
       </Switch>
     </Router>
     

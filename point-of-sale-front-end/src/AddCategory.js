@@ -6,15 +6,40 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function AddCategory(){
+    const [CnameError, setCNameError] = useState("");
+    const[Cname,setCName] = useState("");
+
+    const validate = (event) => {
+        var val = event.target.value;
+        setCNameError("");
+        let error = "";
+        if (!val) {
+            setCNameError("Name cannot be blank");
+        }
+        else if(val.match(/\d/)){
+            setCNameError("Number can't be added");
+        }
+        else if (val.length<=3){
+            setCNameError("Name length too small");
+        }
+        else if(error){
+            setCNameError(error);
+        }
+        setCName(val);
+        return true;
+    }
+
     return(
         <div>
             <NavbarCustom title="Merchandise Management" dd1="Dashboard" dd1Route="dashboard" dd2="POS" dd2Route="pos" dd3="Cashier Registration" dd3Route="cashier" dd4="Customer Details" dd4Router="customer" dd5="Sales Analysis" dd5Route="sales"/>
             <div className="container-fluid">
                 <Row sm='12'>
                     <Col sm='2'>
-                        <Button id ="buto" as="input" type="submit" className="topbutton">
-                            <Link to="/admin/merchandise">Back</Link>
-                        </Button>
+                        <Link to="/admin/merchandise">
+                            <Button id ="buto" as="input" type="submit" className="topbutton">
+                                Back
+                            </Button>
+                        </Link>
                     </Col>
                 </Row>
                 <Row sm='12'>
@@ -28,13 +53,14 @@ function AddCategory(){
                             <Col sm='8'>
                                 <FormGroup>
                                         <Label for="productnamel">Category Name</Label>
-                                        <Input type="text" name="productname" id="exampleEmail" placeholder="Enter Category Name" />
+                                        <Input type="text" name="productname" id="exampleEmail" placeholder="Enter Category Name" value ={Cname} onChange={(e)=>{validate(e)}} required />
+                                        <div style={{color:"red"}}>{CnameError}</div>
                                 </FormGroup>
                             </Col>
                             <Col sm='4' id="categorycolumn">
                                 <FormGroup>
                                     <Label for="exampleSelect">Category Code</Label>
-                                    <Input type="text" name="select" id="exampleSelect" placeholder="Enter code here"/>
+                                    <Input type="text" name="select" id="exampleSelect" placeholder="Enter code here" required/>
                                 </FormGroup>
                             </Col>
                         </Row>
@@ -49,13 +75,9 @@ function AddCategory(){
                         <Row>
                             <Col sm='12'>
                                 <FormGroup>
-                                <Label for="exampleFile">Upload Image</Label>
-                                <br/>
-                                <Input type="file" name="file" id="exampleFile" />
-                                {/* <FormText color="muted">
-                                This is some placeholder block-level help text for the above input.
-                                It's a bit lighter and easily wraps to a new line.
-                                </FormText> */}
+                                    <Label for="exampleFile">Upload Image</Label>
+                                    <br/>
+                                    <Input type="file" name="file" id="exampleFile" />
                                 </FormGroup>
                             </Col>
                         </Row>

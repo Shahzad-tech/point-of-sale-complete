@@ -70,8 +70,11 @@ function Cashier(){
                     <p>
                         600Rs
                     </p>
-                    <Button  color="danger" className="btn text-light twobuttons offset-9" >Proceed to checkout</Button>
-
+                    <Link to="/pos/checkout">
+                        <Button  color="danger" className="btn text-light twobuttons offset-9" >
+                            Proceed to checkout
+                        </Button>
+                    </Link>
                     </Col>
                     </Col>
                 </Row>
