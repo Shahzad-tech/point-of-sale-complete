@@ -29,12 +29,12 @@ function App() {
 
   return (
     <Router>
-      {/* <img top width="100%" src='./bg3.jfif' alt="Card image cap" /> */}
       <Switch>
         <Route path="/" exact component={Main}/>
         <Route path="/admin/dashboard" exact component={Dashboard}/>
         <Route path="/admin/sales" exact component={SalesAnalysis}/>
         <Route path="/admin/merchandise" exact component={Product}/>
+        <Route path="/admin/merchandise/product/:id" exact component={ProductEdit}/>
         <Route path="/admin/merchandise/addproduct" exact component={AddProduct}/>
         <Route path="/admin/merchandise/addcategory" exact component={AddCategory}/>
         <Route path="/admin/customer" exact component={CustomerInfo}/>
@@ -44,10 +44,6 @@ function App() {
         <Route path="/pos" exact component={Cashier}/>
       </Switch>
     </Router>
-
-    //<ProductEdit/>
-    //<NavbarCustom/>
-    
     
   );
 }

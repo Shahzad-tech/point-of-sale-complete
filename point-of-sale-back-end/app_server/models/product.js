@@ -24,7 +24,7 @@ var ProductSchema = new Schema({
         // required: true,
     },
     picture: {
-        type: Buffer,
+        type: String,
         // required: false,
     }
 });

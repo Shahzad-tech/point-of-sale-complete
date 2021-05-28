@@ -37,5 +37,19 @@ span {
 .container-fluid {
     margin-top: 40px;
 }
+.cards{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-inline: 3em;
+}
+.cardsimg{
+   height: 300px;
+}
+.cardtitle{
+    font-weight: bold;
+    color: rgb(100,41,117);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform:uppercase;
+    font-size: 20px;
+}
 
 

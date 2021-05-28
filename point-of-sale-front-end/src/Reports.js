@@ -146,7 +146,7 @@ function SalesAnalysis(){
   return(
     <div>
       <NavbarCustom title="Sales Analysis" dd1="Dashboard" dd1="Dashboard" dd2="POS" dd2="POS" dd3="Merchandise Management" dd3Route="merchandise" dd4="Customer Details" dd4Route="customer" dd5="Cashier Registration" dd5Route="cashier"/>
-      <Tabs defaultActiveKey="Product" transition={false} id="noanim-tab-example" className="mt-5">
+      <Tabs defaultActiveKey="Daily Sales" transition={false} id="noanim-tab-example" className="mt-5">
         <Tab eventKey="Daily Sales" title="Daily Sales" tabClassName="tab-title">
           <DailySale/>
         </Tab>

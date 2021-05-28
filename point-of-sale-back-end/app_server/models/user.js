@@ -34,7 +34,7 @@ var UserSchema = new Schema({
         // required: true,
     },
     picture: {
-        type: Buffer,
+        type: String,
         // required: false,
     }
 });

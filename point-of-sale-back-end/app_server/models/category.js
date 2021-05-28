@@ -15,7 +15,7 @@ var CategorySchema = new Schema({
         // required: false,
     },
     picture: {
-        type: Buffer,
+        type: String,  //change to buffer later
         // required: false,
     }
 });
