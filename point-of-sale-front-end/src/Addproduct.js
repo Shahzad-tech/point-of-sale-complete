@@ -48,11 +48,11 @@ function AddProduct(){
         return true;
     }
 
-    const submitHandle = async ()=> {
+    const submitHandle = ()=> {
         // alert(PName, pCategory, pPrice, pQty, pDesc,pImg);
         const data = {PName, pCategory,pDesc, pQty, pPrice,pImg};
         alert(data);
-        await axios.post('http://localhost:5000/products/add', data).then((response) => {
+        axios.post('http://localhost:5000/products/add', data).then(response => {
             alert("product added successfully");
         //     // setCategory(data);
         //     // console.log(data);

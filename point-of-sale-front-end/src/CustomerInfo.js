@@ -19,7 +19,6 @@ const top100Films = [
 
 export default function CustomerInfo() {
     const[customer, setCustomer] = useState([]);
-    //const[category, setCategory] = useState([]);
 
     useEffect(() => {
         getCustomerList();

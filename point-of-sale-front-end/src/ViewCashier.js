@@ -55,34 +55,34 @@ function ViewCashier(){
                       <tr>
                         <th>Image</th>
                         <th>Name</th>
-                        <th>Code</th>
+                        <th>Counter No</th>
                         <th>Contact</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td scope="row"></td>
-                        <td>Classical</td>
-                        <td>Shirts</td>
-                        <td>3</td>
-                      </tr>
-                      <tr>
-                        <td scope="row"></td>
-                        <td>Rainbow</td>
-                        <td>Shirts</td>
+                        <td>Ali</td>
                         <td>2</td>
+                        <td>090078601</td>
                       </tr>
                       <tr>
                         <td scope="row"></td>
-                        <td>Modern Warfare</td>
-                        <td>Shirts</td>
-                        <td>4</td>
-                      </tr>
-                      <tr>
-                        <td scope="row"></td>
-                        <td>Girly</td>
-                        <td>Womens</td>
+                        <td>Arsalan</td>
                         <td>1</td>
+                        <td>090078601</td>
+                      </tr>
+                      <tr>
+                        <td scope="row"></td>
+                        <td>Muhammad Ali</td>
+                        <td>4</td>
+                        <td>090078601</td>
+                      </tr>
+                      <tr>
+                        <td scope="row"></td>
+                        <td>Zain</td>
+                        <td>1</td>
+                        <td>090078601</td>
                       </tr>
                     </tbody>
                   </Table>
