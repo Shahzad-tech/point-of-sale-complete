@@ -10,6 +10,7 @@ import './CustomerInfo.css';
 import {NavbarCustom} from './Navbar.js';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { Table , Button} from 'reactstrap';
 
 const top100Films = [
     { title: 'The Shawshank Redemption', year: 1994 },
@@ -36,10 +37,36 @@ export default function CustomerInfo() {
         <div> 
             <NavbarCustom title="Customer Details" dd1="Dashboard" dd1Route="dashboard" dd2="POS" dd2Route="pos" dd3="Merchandise Management" dd3Route="merchandise" dd4="Cashier Registration" dd4Route="cashier" dd5="Sales Analysis" dd5Route="sales"/>
             <br/>
-            <p>{customer.error}</p>
             <Container fluid>
-                <Row>
-                    <Col xs lg={4} className='tab__bar'>
+            <div className="container-fluid">
+            <Row>
+            <Col md='7' className="mt-5 offset-2">
+            <Table>
+                    <thead>
+                        <tr>
+                        <th>Name</th>
+                        <th>Contact</th>
+                        <th>Photo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {customer.map(customers =>{
+                        return(
+                        <tr>
+                        <th scope="row">{customers.name}</th>
+                        <td>{customers.contactNo}</td>
+                        <td><img height = "200px" width="200px" src={customers.picture}></img></td>      
+                        </tr>
+                     )})
+                        }
+                    </tbody>
+            </Table>
+            </Col>
+            </Row>
+            </div>
+
+                {/* <Row> */}
+                    {/* <Col xs lg={4} className='tab__bar'>
                     <AppBar position="static" color="default">
                         <Tabs variant="fullWidth">
                             <Tab label="find by name" />
@@ -49,10 +76,10 @@ export default function CustomerInfo() {
                     <SwipeableViews>
                         list goes here
                     </SwipeableViews>
-                    </Col>
+                    </Col> */}
 
 
-                    <Col xs lg={{ span: 7   , offset: 1}} className='form__info'>
+                    {/* <Col xs lg={{ span: 7   , offset: 1}} className='form__info'>
                         <Autocomplete 
                             id="combo-box-demo"
                             options={top100Films}
@@ -64,8 +91,8 @@ export default function CustomerInfo() {
                         <Container fluid>
                             the details of the customer goes here 
                         </Container>
-                    </Col>
-                </Row>
+                    </Col> */}
+                {/* </Row> */}
             </Container>
         </div>
     )
