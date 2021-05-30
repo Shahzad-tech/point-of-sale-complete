@@ -1,6 +1,6 @@
 import './AddCashier.css';
 import { Row,Col,Button, Form, FormGroup, Label, Input} from 'reactstrap';
-import NavbarCustom from './Navbar.js';
+import {NavbarCustom} from './Navbar.js';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 

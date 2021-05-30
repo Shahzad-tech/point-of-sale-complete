@@ -11,7 +11,6 @@ import AddCategory from "./AddCategory.js";
 import ViewCashier from "./ViewCashier.js";
 import SalesAnalysis from "./Reports.js";
 import CustomerInfo from "./CustomerInfo.js";
-import NavbarCustom from "./Navbar.js";
 import Main from "./MainAppScreen.js";
 import Invoice from "./Invoice.js";
 import Axios from "axios";

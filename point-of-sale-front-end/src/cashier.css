@@ -25,3 +25,17 @@ div{
 .mystyle{
     border-right: 1px solid grey;
 }
+#paymentHead{
+    border: 1px solid silver;
+    padding: 1em;
+    background-color: white;
+    color: grey;
+}
+.paymentOptions{
+    border: 1px solid silver;
+    padding: 1em;
+    background-color: white;
+    width: 70%;
+   color: grey;
+
+}

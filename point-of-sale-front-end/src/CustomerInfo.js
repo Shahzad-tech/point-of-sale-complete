@@ -7,7 +7,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import './CustomerInfo.css';
-import NavbarCustom from './Navbar.js';
+import {NavbarCustom} from './Navbar.js';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 

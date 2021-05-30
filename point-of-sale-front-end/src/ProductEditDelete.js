@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { BsPencil } from "react-icons/bs";
 import { FiDelete } from "react-icons/fi";
 import { Table } from 'reactstrap';
-import NavbarCustom from './Navbar.js';
+import {NavbarCustom} from './Navbar.js';
 import { Link } from 'react-router-dom';
 
 function ProductEdit(){

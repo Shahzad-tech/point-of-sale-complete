@@ -1,6 +1,6 @@
 import { Row,Col,Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import './Addproduct.css';
-import NavbarCustom from './Navbar.js';
+import {NavbarCustom} from './Navbar.js';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';

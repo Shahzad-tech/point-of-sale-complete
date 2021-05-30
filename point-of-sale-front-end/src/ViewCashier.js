@@ -3,7 +3,7 @@ import './ViewCashier.css';
 import {Table,Row,Col,InputGroup, InputGroupAddon, InputGroupText, Input, Button } from 'reactstrap';
 import { IoMdSearch } from "react-icons/io";
 import React, { useState, useEffect } from 'react';
-import NavbarCustom from './Navbar.js';
+import {NavbarCustom} from './Navbar.js';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 

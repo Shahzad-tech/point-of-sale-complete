@@ -6,7 +6,7 @@ import { Switch } from 'react-router-dom';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import { ExclamationSquareFill } from 'react-bootstrap-icons';
-import NavbarCustom from './Navbar.js';
+import {NavbarCustom} from './Navbar.js';
 import { Link } from 'react-router-dom';
 
 const DailySale= ()=>{

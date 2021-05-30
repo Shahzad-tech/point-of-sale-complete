@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 import { IoMdSearch } from "react-icons/io";
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
-import NavbarCustom from './Navbar.js';
+import {NavbarCustom} from './Navbar.js';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { MdDelete } from "react-icons/md";
