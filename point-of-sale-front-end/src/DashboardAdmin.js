@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
@@ -6,10 +6,14 @@ import Typography from '@material-ui/core/Typography';
 // import Toolbar from '@material-ui/core/Toolbar';
 // import IconButton from '@material-ui/core/IconButton';
 // import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
-import { NavLink, Nav, Navbar} from 'react-bootstrap';
+import { NavLink, Nav, Navbar, NavDropdown} from 'react-bootstrap';
 import { IoPeople } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import './DashboardAdmin.css';
+import { CgProfile } from "react-icons/cg";
+import { MdEmail } from "react-icons/md";
+import { IoMdLogOut } from "react-icons/io";
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 const images = [
     {
@@ -122,6 +126,9 @@ const useStyles = makeStyles((theme) => ({
 
 function Dashboard() {
   const classes = useStyles();
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const toggle = () => setDropdownOpen(!dropdownOpen);
+
   return (
     <div>
       <Navbar collapseOnSelect expand="md" sticky="top" className="navbar">
@@ -129,10 +136,25 @@ function Dashboard() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
-            <NavLink>
-              <span>AdminName</span>
-              <IoPeople  style={{color: 'white', marginLeft:'4px'}} size={32}/>
-            </NavLink>
+            <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
+              <DropdownToggle nav>
+                <span>AdminName</span>
+                <IoPeople  style={{color: 'white', marginLeft:'4px'}} size={32}/>
+              </DropdownToggle>
+              <DropdownMenu id="collasible-nav-dropdown2">
+                <DropdownItem >
+                  <span className="navdd"><CgProfile/> Admin</span>
+                </DropdownItem>
+                <NavDropdown.Divider />
+                <DropdownItem >
+                  <span className="navdd"><MdEmail/> Details</span>
+                </DropdownItem>
+                <NavDropdown.Divider />
+                <DropdownItem tag={Link} to="/">
+                  <span className="navdd"><IoMdLogOut/> Logout</span>
+                </DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

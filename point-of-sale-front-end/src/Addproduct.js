@@ -8,44 +8,65 @@ import axios from 'axios';
 function AddProduct(){
     const[categories, setCategory] = useState([]);
     const [PnameError, setPNameError] = useState("");
-    const[Pname,setPName] = useState("");
+    const [PName, setPName] = useState("");
+    const[pCategory,setPCat] = useState("60b0d250f96320d9ecb607b8");
+    const[pDesc,setPDesc] = useState("");
+    const[pPrice,setPPrice] = useState();
+    const[pQty,setPQty] = useState();
+    const[pImg,setPImg] = useState("60b0d250f96320d9ecb607b8");
 
     useEffect(() => {
         getCategoryList();
     },[]);
 
-  const getCategoryList = () => {
-    axios.get('http://localhost:5000/categories').then((response) => {
-      const data = response.data;
-      setCategory(data);
-      console.log(data);
-    }).catch(() => {console.log('unable to receive data')
-    });
-  }
+    const getCategoryList = () => {
+        axios.get('http://localhost:5000/categories').then((response) => {
+        const data = response.data;
+        setCategory(data);
+        console.log(data);
+        }).catch(() => {console.log('unable to receive data')
+        });
+    }
 
-  const validate = (event) => {
-    var val = event.target.value;
-    setPNameError("");
-    let error = "";
-    if (!val) {
-        setPNameError("Name cannot be blank");
+    const validate = (event) => {
+        var val = event.target.value;
+        setPNameError("");
+        let error = "";
+        if (!val) {
+            setPNameError("Name cannot be blank");
+        }
+        else if(val.match(/\d/)){
+            setPNameError("Number can't be added");
+        }
+        else if (val.length<=3){
+            setPNameError("Name length too small");
+        }
+        else if(error){
+            setPNameError(error);
+        }
+        setPName(val);
+        return true;
     }
-    else if(val.match(/\d/)){
-        setPNameError("Number can't be added");
+
+    const submitHandle = async ()=> {
+        // alert(PName, pCategory, pPrice, pQty, pDesc,pImg);
+        const data = {PName, pCategory,pDesc, pQty, pPrice,pImg};
+        alert(data);
+        await axios.post('http://localhost:5000/products/add', data).then((response) => {
+            alert("product added successfully");
+        //     // setCategory(data);
+        //     // console.log(data);
+        });
+        setPName("");
+        setPDesc("");
+        setPPrice("");
+        setPQty("");
     }
-    else if (val.length<=3){
-        setPNameError("Name length too small");
-    }
-    else if(error){
-        setPNameError(error);
-    }
-    setPName(val);
-    return true;
-  }
+
 
     return(
         <div>
-            <NavbarCustom title="Merchandise Management" dd1="Dashboard" dd1Route="dashboard" dd2="POS" dd2Route="pos" dd3="Cashier Registration" dd3Route="cashier" dd4="Customer Details" dd4Router="customer" dd5="Sales Analysis" dd5Route="sales"/>
+            <NavbarCustom title="Merchandise Management" dd1="Dashboard" dd1Route="dashboard" dd2="POS" dd2Route="pos" dd3="Cashier Registration" dd3Route="cashier" dd4="Customer Details" dd4Route="customer" dd5="Sales Analysis" dd5Route="sales"/>
             <div className="container-fluid">
                 <Row sm='12'>
                     <Col sm='2'>
@@ -67,7 +88,7 @@ function AddProduct(){
                             <Col sm='8'>
                                 <FormGroup>
                                         <Label for="productnamel">Product Name</Label>
-                                        <Input type="text" name="productname" id="exampleEmail" placeholder="Enter Product Name" value ={Pname} onChange={(e)=>{validate(e)}} required />
+                                        <Input type="text" name="productname" id="exampleEmail" placeholder="Enter Product Name" value ={PName} onChange={(e)=>{validate(e)}} required />
                                         <div style={{color:"red"}}>{PnameError}</div>
                                 </FormGroup>
                             </Col>
@@ -88,7 +109,7 @@ function AddProduct(){
                             <Col sm='12'>
                                 <FormGroup>
                                 <Label for="exampleText">Description</Label>
-                                    <Input type="textarea" name="text" id="exampleText" />
+                                    <Input type="textarea" name="text" id="exampleText" value={pDesc} onChange={(e)=>{setPDesc(e.target.value)}}/>
                                 </FormGroup>
                             </Col>
                         </Row>
@@ -96,13 +117,13 @@ function AddProduct(){
                             <Col sm='6'>
                                 <FormGroup>
                                     <Label for="quantity">Quantity</Label>
-                                    <Input type="number" name="quantity" id="exampleEmail" placeholder="Enter an integer number" required />
+                                    <Input type="number" name="quantity" id="exampleEmail" value={pQty} placeholder="Enter an integer number" required onChange={(e)=>{setPQty(e.target.value)}} />
                                 </FormGroup>
                             </Col>
                             <Col sm='6'>
                                 <FormGroup>
                                     <Label for="price">Price</Label>
-                                    <Input type="number" name="price" id="exampleEmail" placeholder="Enter a number" required/>
+                                    <Input type="number" name="price" id="exampleEmail" value={pPrice} placeholder="Enter a number" required onChange={(e)=>{setPPrice(e.target.value)}}/>
                                 </FormGroup>
                             </Col>
                         </Row>
@@ -117,7 +138,7 @@ function AddProduct(){
                         </Row>
                         <Row>
                             <Col sm='12' className='mt-4' id="bottomcolumn">
-                                <Button id="bottombutton">Add Product</Button>
+                                <Button id="bottombutton" onClick={()=>{submitHandle()}}>Add Product</Button>
                             </Col>
                         </Row>
                     </Form>

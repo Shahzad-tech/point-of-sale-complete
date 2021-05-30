@@ -1,4 +1,4 @@
-import { NavLink,NavDropdown, Nav, Navbar,} from 'react-bootstrap';
+import { NavDropdown, Nav, Navbar,} from 'react-bootstrap';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { IoPeople } from "react-icons/io5";
 import './Navbar.css';
@@ -47,7 +47,7 @@ function NavbarCustom(props){
                                 <span className="navdd"><MdEmail/> Details</span>
                             </DropdownItem>
                             <NavDropdown.Divider />
-                            <DropdownItem >
+                            <DropdownItem tag={Link} to="/">
                                 <span className="navdd"><IoMdLogOut/> Logout</span>
                             </DropdownItem>
                         </DropdownMenu>
@@ -85,7 +85,7 @@ function NavbarCashier(props){
                                 <span className="navdd"><MdEmail/> Details</span>
                             </DropdownItem>
                             <NavDropdown.Divider />
-                            <DropdownItem >
+                            <DropdownItem tag={Link} to="/">
                                 <span className="navdd"><IoMdLogOut/> Logout</span>
                             </DropdownItem>
                         </DropdownMenu>
