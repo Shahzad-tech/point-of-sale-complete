@@ -41,30 +41,24 @@ function ProductEdit(){
                     <tbody>
                     <tr>
                         <th scope="row">Product Name</th>
-                        <td>Rainbow</td>
-            
+                        <td>T-SHIRT</td>
                         </tr>
                         <tr>
                         <th scope="row">Category</th>
-                        <td>Men</td>
-                       
+                        <td>Kids</td>
                         </tr>
                         <tr>
                         <th scope="row">Quantity</th>
-                        <td>4</td>
-                      
+                        <td>150</td>
                         </tr>
                         <tr>
                         <th scope="row">Price</th>
-                        <td>20$</td>
-
+                        <td>$2800</td>
                         </tr>
                         <tr>
                         <th scope="row">Description</th>
-                        <td>The product is new to the market and has all other things</td>
-
+                        <td>Kids shirt</td>
                         </tr>
-
                     </tbody>
                 </Table>
             </Col>
